@@ -19,7 +19,7 @@ Direct pulling from the senseBox is not planned for two reasons:
 
 1. this would contradict the idea of having senseBoxes all around the globe that will help to create
 some sort of open data collective.
-2. this would make it harder to use the senseBox as setup and usage would differ from the official
+2. this would make it harder to setup the senseBox as setup and usage would differ from the official
 docs.
 
 ## About senseBox
