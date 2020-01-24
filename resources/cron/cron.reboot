@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+REPLACELBPBINDIR/reboot_cron_runner

@@ -1,0 +1,11 @@
+{% if block("htmlHead") is defined %}
+    {{ loxBerryHtmlHead(pageTitle|default(plugin.name), block('htmlHead')) }}
+{% else %}
+    {{ loxBerryHtmlHead(pageTitle|default(plugin.name)) }}
+{% endif %}
+{{ loxBerryPageStart(pageTitle|default(plugin.title)|default(plugin.name)) }}
+
+{% block body %}{% endblock %}
+
+{{ loxBerryPageEnd() }}
+{{ loxBerryHtmlFoot() }}

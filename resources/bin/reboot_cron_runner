@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+use LoxBerryPoppins\Cron\CronJobRunner;
+use LoxBerryPoppins\PluginKernel;
+
+require_once 'REPLACELBPDATADIR/vendor/autoload.php';
+
+$kernel = new PluginKernel('REPLACELBPDATADIR');
+
+$cronJobRunner = $kernel->getContainer()->get(CronJobRunner::class);
+$cronJobRunner->executeRebootCronJobs();

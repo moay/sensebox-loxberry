@@ -1,0 +1,9 @@
+{% extends 'pages/templates/adminBasePage.html.twig' %}
+
+{% block body %}
+    <img src="{{ assetUrl('img/poppins-logo.png') }}" />
+    <h2>{{ trans('demo.headline') }}</h2>
+    <p>{{ trans('demo.explanation_1')|raw }}</p>
+    <p>{{ trans('demo.explanation_2') }}</p>
+    <p>{{ trans('demo.have_fun') }}</p>
+{% endblock %}

@@ -1,0 +1,26 @@
+{
+    "require": {
+        "php": ">=7.2",
+        "moay/loxberry-core": "^1.0",
+        "moay/loxberry-poppins": "^1.0",
+        "ext-json": "*",
+        "moay/opensensemap-api-php-client": "^1.0"
+    },
+    "require-dev": {
+        "moay/loxberry-plugin-pushinstall": "^1"
+    },
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "moay",
+            "email": "mv@moay.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LoxBerryPoppinsPlugin\\": "src/",
+            "Tests\\": "tests/"
+        }
+    }
+}

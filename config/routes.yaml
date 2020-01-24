@@ -1,0 +1,16 @@
+home:
+  route: '/'
+  controller: 'LoxBerryPoppinsPlugin\Controller\DemoController'
+  action: 'demoPage'
+
+logs:
+  route: '/logs'
+  controller: 'LoxBerryPoppinsPlugin\Controller\DemoController'
+  action: 'logsPage'
+
+#  Full configuration could look like this:
+#  someRoute:
+#    route: '/'
+#    controller: 'LoxBerryPoppinsPlugin\Controller\SomeController'
+#    method: 'GET,POST' <- GET is assumed if not provided
+#    public: true <- false is assumed if not provided
