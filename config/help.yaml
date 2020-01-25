@@ -5,4 +5,4 @@ url: https://google.com
 # Stick to this format:
 #   [Route name]: [Twig file in your views folder]
 pages:
-  home: help/home.html.twig
+#  settings: help/settings.html.twig

@@ -1,12 +1,12 @@
-home:
+settings:
   route: '/'
-  controller: 'LoxBerryPoppinsPlugin\Controller\DemoController'
-  action: 'demoPage'
-
-logs:
-  route: '/logs'
-  controller: 'LoxBerryPoppinsPlugin\Controller\DemoController'
-  action: 'logsPage'
+  controller: 'LoxBerryPoppinsPlugin\Controller\SettingsController'
+  action: 'settingsPage'
+storeSettings:
+  route: '/store-settings'
+  method: 'POST'
+  controller: 'LoxBerryPoppinsPlugin\Controller\SettingsController'
+  action: 'storeSettings'
 
 #  Full configuration could look like this:
 #  someRoute:

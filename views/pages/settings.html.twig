@@ -1,0 +1,66 @@
+{% extends 'pages/templates/adminBasePage.html.twig' %}
+
+{% block body %}
+    <img src="{{ assetUrl('img/sensebox-logo.png') }}" style="width: 200px; height: auto" />
+    <h2>{{ trans('settings.headline') }}</h2>
+    <p>{{ trans('settings.explanation')|raw }}</p>
+
+    <form action="{{ adminRouteUrl('storeSettings') }}" method="post">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 25%">
+                    <label for="sensebox_id">{{ trans('settings.form_label_sensebox_id') }}</label>
+                </td>
+                <td style="width: 50%">
+                    <input type="text" name="sensebox_id" id="sensebox_id" value="{{ settings.sensebox_id }}" />
+                </td>
+                <td style="width: 25%"></td>
+            </tr>
+            <tr>
+                <td style="width: 25%">
+                    <label for="miniserver_id">{{ trans('settings.form_label_miniserver') }}</label>
+                </td>
+                <td style="width: 50%">
+                    {{ miniserverSelect(null, 'miniserver_id', settings.udp_miniserver, false) }}
+                </td>
+                <td style="width: 25%"></td>
+            </tr>
+            <tr>
+                <td style="width: 25%">
+                    <label for="udp_port">{{ trans('settings.form_label_udp_port') }}</label>
+                </td>
+                <td style="width: 50%">
+                    <input type="number" name="udp_port" id="udp_port" value="{{ settings.udp_port }}" placeholder="7000" />
+                </td>
+                <td style="width: 25%"></td>
+            </tr>
+            <tr>
+                <td style="width: 75%" colspan="2">
+                    <label for="enable_cronjob">{{ trans('settings.form_label_enable_cronjob') }}</label>
+                    <input type="checkbox" name="enable_cronjob" id="enable_cronjob" {{ settings.enable_cronjob ? 'checked' : ''}} />
+                </td>
+                <td style="width: 25%"></td>
+            </tr>
+            <tr>
+                <td style="width: 25%">
+                    <label for="udp_interval">{{ trans('settings.form_label_udp_port') }}</label>
+                </td>
+                <td style="width: 50%">
+                    <select name="udp_interval" id="udp_interval">
+                        {% for value, label in cronjobIntervals %}
+                            <option value="{{ value }}" {{ settings.udp_interval == value ? 'selected="selected"' : ''}}>{{ trans(label) }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td style="width: 25%"></td>
+            </tr>
+
+        </table>
+
+
+        <p>{{ trans('settings.explanation_bottom') }}</p>
+        <p style="text-align: center;">
+            <button type="submit" data-inline="true" data-role="button" data-mini="true">{{ translate('general.form_save') }}</button>
+        </p>
+    </form>
+{% endblock %}

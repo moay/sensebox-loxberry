@@ -1,9 +1,6 @@
 # Configure your admin navbar here, pass a title and a route to each item.
 # The navbar won't be displayed if not items are found
-
-home:
-  title: navbar.welcome
-  route: home
-logs:
-  title: navbar.logs
-  route: logs
+#
+#home:
+#  title: navbar.welcome
+#  route: home
