@@ -1,0 +1,33 @@
+table.settings {
+    width: 100%; vertical-align: top;
+}
+
+table.settings td {
+    vertical-align: top;
+}
+
+table.settings td.middle {
+    width: 50%;
+    padding-top: 0;
+}
+table.settings td:first-child {
+    width: 25%;
+    padding-top: 20px;
+}
+table.settings td:last-child {
+    width: 25%;
+    padding-left: 30px;
+}
+table.settings td:last-child:first-child {
+    padding-left: 0;
+    padding-top: 0;
+}
+table.settings td .ui-field-contain {
+    padding-top: 0;
+    margin-top: 0;
+}
+table.settings td .ui-checkbox {
+    padding-top: 0;
+    padding-bottom: 20px;
+    margin-top: 0;
+}

@@ -1,58 +1,75 @@
 {% extends 'pages/templates/adminBasePage.html.twig' %}
 
+{% block htmlHead %}
+    <link type="text/css" rel="stylesheet" href="{{ assetUrl('css/styles.css') }}" />
+{% endblock %}
+
 {% block body %}
     <img src="{{ assetUrl('img/sensebox-logo.png') }}" style="width: 200px; height: auto" />
     <h2>{{ trans('settings.headline') }}</h2>
     <p>{{ trans('settings.explanation')|raw }}</p>
 
     <form action="{{ adminRouteUrl('storeSettings') }}" method="post">
-        <table style="width: 100%;">
+        <table class="settings">
             <tr>
-                <td style="width: 25%">
+                <td>
                     <label for="sensebox_id">{{ trans('settings.form_label_sensebox_id') }}</label>
                 </td>
-                <td style="width: 50%">
+                <td class="middle">
                     <input type="text" name="sensebox_id" id="sensebox_id" value="{{ settings.sensebox_id }}" />
                 </td>
-                <td style="width: 25%"></td>
+                <td>
+                    <small>{{ translate('settings.form_hint_sensebox_id')|raw }}</small>
+                </td>
             </tr>
             <tr>
-                <td style="width: 25%">
-                    <label for="miniserver_id">{{ trans('settings.form_label_miniserver') }}</label>
+                <td colspan="3">
+                    <h2>{{ trans('settings.form_section_data_transmission') }}</h2>
                 </td>
-                <td style="width: 50%">
-                    {{ miniserverSelect(null, 'miniserver_id', settings.udp_miniserver, false) }}
-                </td>
-                <td style="width: 25%"></td>
             </tr>
             <tr>
-                <td style="width: 25%">
-                    <label for="udp_port">{{ trans('settings.form_label_udp_port') }}</label>
-                </td>
-                <td style="width: 50%">
-                    <input type="number" name="udp_port" id="udp_port" value="{{ settings.udp_port }}" placeholder="7000" />
-                </td>
-                <td style="width: 25%"></td>
-            </tr>
-            <tr>
-                <td style="width: 75%" colspan="2">
+                <td style="width: 75%;" colspan="2">
                     <label for="enable_cronjob">{{ trans('settings.form_label_enable_cronjob') }}</label>
                     <input type="checkbox" name="enable_cronjob" id="enable_cronjob" {{ settings.enable_cronjob ? 'checked' : ''}} />
                 </td>
-                <td style="width: 25%"></td>
+                <td>
+                    <small>{{ translate('settings.form_hint_cronjob') }}</small>
+                </td>
             </tr>
             <tr>
-                <td style="width: 25%">
-                    <label for="udp_interval">{{ trans('settings.form_label_udp_port') }}</label>
+                <td>
+                    <label for="udp_interval">{{ trans('settings.form_label_udp_interval') }}</label>
                 </td>
-                <td style="width: 50%">
+                <td class="middle">
                     <select name="udp_interval" id="udp_interval">
                         {% for value, label in cronjobIntervals %}
                             <option value="{{ value }}" {{ settings.udp_interval == value ? 'selected="selected"' : ''}}>{{ trans(label) }}</option>
                         {% endfor %}
                     </select>
                 </td>
-                <td style="width: 25%"></td>
+                <td>
+                    <small>{{ translate('settings.form_hint_interval') }}</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="miniserver_id">{{ trans('settings.form_label_miniserver') }}</label>
+                </td>
+                <td class="middle">
+                    {{ miniserverSelect(null, 'miniserver_id', settings.udp_miniserver, false) }}
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="udp_port">{{ trans('settings.form_label_udp_port') }}</label>
+                </td>
+                <td class="middle">
+                    <input type="number" name="udp_port" id="udp_port" value="{{ settings.udp_port }}" placeholder="7000" />
+                </td>
+                <td>
+                    <small>{{ translate('settings.form_hint_udp_port') }}</small>
+                </td>
             </tr>
 
         </table>

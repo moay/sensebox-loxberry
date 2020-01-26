@@ -1,8 +1,9 @@
 # The general help url for your plugin. Will be displayed on all admin pages.
-url: https://google.com
+url: https://github.com/moay/sensebox-loxberry
 
 # Optional: Provide a helo view for your admin pages.
 # Stick to this format:
 #   [Route name]: [Twig file in your views folder]
 pages:
-#  settings: help/settings.html.twig
+  settings: help/default.html.twig
+  senseboxTest: help/default.html.twig

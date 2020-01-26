@@ -1,0 +1,24 @@
+{% extends 'pages/templates/adminBasePage.html.twig' %}
+
+{% block body %}
+    <h2>{{ trans('sensebox-test.headline') }}</h2>
+    {% if settings.sensebox_id %}
+        <p>{{ translate('sensebox-test.current_data_overview') }}</p>
+        <p>{{ translate('sensebox-test.your_sensebox_id') }}: {{ settings.sensebox_id }}</p>
+
+        {% if data == null %}
+            <p>{{ translate('sensebox-test.data_missing_id_wrong') }}: {{ settings.sensebox_id }}</p>
+        {% else %}
+            {% for sensorValue in data.sensorValues %}
+                <div style="padding: 20px; background-color: rgba(230,230,230,0.6); margin-bottom: 10px">
+                    {{ ('sensebox-test.value_type_' ~ sensorValue.valueType)|trans }}:
+                    {{ sensorValue.value }} {{ sensorValue.unit }}
+                    ({{ sensorValue.measurementTime.format('Y-m-d H:i:s') }}, {{ trans('sensebox-test.sensor') }} {{ sensorValue.sensorType }})
+                </div>
+            {% endfor %}
+            <p><small>{{ translate('sensebox-test.timezone_explanation') }}</small></p>
+        {% endif %}
+    {% else %}
+        <p>{{ translate('sensebox-test.id_not_defined') }}</p>
+    {% endif %}
+{% endblock %}

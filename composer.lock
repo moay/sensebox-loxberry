@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9d7a26427a0c61a47b46402fc8dbb7b",
+    "content-hash": "071c00e69bc9b68654d594158ba7b0cc",
     "packages": [
         {
             "name": "catfan/medoo",
@@ -405,16 +405,16 @@
         },
         {
             "name": "moay/loxberry-poppins",
-            "version": "1.0.0-beta4",
+            "version": "1.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moay/loxberry-poppins.git",
-                "reference": "8922bb73b0c7db4fab0d808455a4340b488e2041"
+                "reference": "8de7bd5d79654427ed2ab34995f0751f1b21137c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moay/loxberry-poppins/zipball/8922bb73b0c7db4fab0d808455a4340b488e2041",
-                "reference": "8922bb73b0c7db4fab0d808455a4340b488e2041",
+                "url": "https://api.github.com/repos/moay/loxberry-poppins/zipball/8de7bd5d79654427ed2ab34995f0751f1b21137c",
+                "reference": "8de7bd5d79654427ed2ab34995f0751f1b21137c",
                 "shasum": ""
             },
             "require": {
@@ -453,20 +453,20 @@
                 }
             ],
             "description": "A PHP Framework for LoxBerry plugins",
-            "time": "2020-01-24T13:50:48+00:00"
+            "time": "2020-01-25T15:32:31+00:00"
         },
         {
             "name": "moay/opensensemap-api-php-client",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moay/opensensemap-api-php-client.git",
-                "reference": "75ee92f21a0e32cc0d7348b6f3aa07ff1bafb826"
+                "reference": "08e1931356bf5f3db9fb59f1073bac724ee11064"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moay/opensensemap-api-php-client/zipball/75ee92f21a0e32cc0d7348b6f3aa07ff1bafb826",
-                "reference": "75ee92f21a0e32cc0d7348b6f3aa07ff1bafb826",
+                "url": "https://api.github.com/repos/moay/opensensemap-api-php-client/zipball/08e1931356bf5f3db9fb59f1073bac724ee11064",
+                "reference": "08e1931356bf5f3db9fb59f1073bac724ee11064",
                 "shasum": ""
             },
             "require": {
@@ -495,7 +495,7 @@
                 }
             ],
             "description": "A client for retrieving sensor data from a senseBox from the opensensemap api",
-            "time": "2020-01-17T18:59:46+00:00"
+            "time": "2019-08-02T07:13:24+00:00"
         },
         {
             "name": "psr/container",
@@ -1564,9 +1564,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "moay/opensensemap-api-php-client": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

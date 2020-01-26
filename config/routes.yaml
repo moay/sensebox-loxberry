@@ -7,6 +7,10 @@ storeSettings:
   method: 'POST'
   controller: 'LoxBerryPoppinsPlugin\Controller\SettingsController'
   action: 'storeSettings'
+senseboxTest:
+  route: '/test'
+  controller: 'LoxBerryPoppinsPlugin\Controller\SenseboxTestController'
+  action: 'testRetrieval'
 
 #  Full configuration could look like this:
 #  someRoute:

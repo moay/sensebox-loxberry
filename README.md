@@ -9,9 +9,20 @@ This plugin pulls data from senseBox boxes by use of the opensensemap api. If yo
 senseBox to this plugin, you will need to make it push to the opensensemap first and then be able
 to pull the values from there.
 
-## Setup
+### Prefinal version
 
-*Work in progress*
+The plugin was built using LoxBerry Poppins, which is not finally released yet. Therefore, the plugin is not in a final state. This will change soon. 
+
+## Setup instructions and Documentation
+
+Wiki page coming soon.
+
+Basically just enter LoxBerry plugin management and install the plugin from this url: 
+```
+https://github.com/moay/sensebox-loxberry/archive/0.9.0-alpha.zip
+```
+
+Or just download the zip file and upload it to your LoxBerry.
 
 ### Direct pulling from the senseBox without using the API
 
@@ -28,3 +39,11 @@ senseBox, as well as all related visual or technical files and data, is publishe
 for general public use.
 
 Read more about the project on [sensebox.de](https://sensebox.de/).
+
+## License
+
+The plugin is licensed under the MIT License.
+
+---
+
+[![Build with LoxBerry Poppins](https://user-images.githubusercontent.com/3605512/73123470-9c661e00-3f90-11ea-91d6-6f150b6d828a.png)](https://github.com/loxberry-poppins-base-plugin)

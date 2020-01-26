@@ -1,8 +1,0 @@
-{% extends 'pages/templates/adminBasePage.html.twig' %}
-
-{% block body %}
-    <img src="{{ assetUrl('img/poppins-logo.png') }}" />
-    <h2>{{ trans('logs.headline') }}</h2>
-    <p>{{ trans('logs.cron_explanation') }}</p>
-    {{ logList('Cron') }}
-{% endblock %}
