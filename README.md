@@ -19,7 +19,7 @@ Wiki page coming soon.
 
 Basically just enter LoxBerry plugin management and install the plugin from this url: 
 ```
-https://github.com/moay/sensebox-loxberry/archive/0.9.0-alpha.zip
+https://github.com/moay/sensebox-loxberry/archive/0.9.1.zip
 ```
 
 Or just download the zip file and upload it to your LoxBerry.
@@ -46,4 +46,4 @@ The plugin is licensed under the MIT License.
 
 ---
 
-[![Build with LoxBerry Poppins](https://user-images.githubusercontent.com/3605512/73123470-9c661e00-3f90-11ea-91d6-6f150b6d828a.png)](https://github.com/loxberry-poppins-base-plugin)
+[![Build with LoxBerry Poppins](https://user-images.githubusercontent.com/3605512/73123470-9c661e00-3f90-11ea-91d6-6f150b6d828a.png)](https://github.com/moay/loxberry-poppins-base-plugin)
